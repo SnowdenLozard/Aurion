@@ -71,30 +71,30 @@
          <div class="clear"></div>
     </header>
 
-    <?php 
-    // Captura da URL
-    $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+<?php 
+// Captura da URL
+$url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
-    // Permite apenas letras, números, hífen e underscore
-    $url = preg_replace('/[^a-zA-Z0-9_-]/', '', $url);
+// Permite apenas letras, números, hífen e underscore
+$url = preg_replace('/[^a-zA-Z0-9_-]/', '', $url);
 
-    // Caminho da página
-    $pagina = 'paginas/' . $url . '.php';
+// Caminho da página
+$pagina = 'paginas/' . $url . '.php';
 
-    // Se a página existe, inclui
-    if (file_exists($pagina)) {
-        include($pagina);
+// Se a página existe, inclui
+if (file_exists($pagina)) {
+    include($pagina);
+} else {
+    // Se for depoimentos, carrega a home
+    if($url === 'depoimentos'){
+        include('paginas/home.php');
     } else {
-        // Se for depoimentos, carrega a home
-        if($url === 'depoimentos'){
-            include('paginas/home.php');
-        } else {
-            // Para outras URLs, inclui 404
-            http_response_code(404);
-            include('paginas/404.php');
-        }
+        // Para outras URLs, inclui 404
+        http_response_code(404);
+        include('paginas/404.php');
     }
-    ?>
+}
+?>
 
 
 
