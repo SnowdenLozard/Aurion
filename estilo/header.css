@@ -1,0 +1,85 @@
+/* ============================================================ Conteúdo do Header ===========================================================*/
+
+header{
+    width: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 70px;
+    z-index: 10000;
+    position: fixed;
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); */
+    text-align: center;
+    color: #e0ecff;
+    overflow: hidden;
+}
+
+
+.mobile{
+  display: none;
+}
+
+
+.esquerda .img_au{
+    width: 55px;
+    margin: 5px 9px;
+    border: 2px solid #fff;
+    height: 55px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.esquerda input[type="search"]{
+    font-size: 14px;
+    padding: 10px;
+    text-transform: capitalize;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    border: none;
+    font-weight: bold;
+    margin: 24px 14px;
+    outline: none;
+}
+
+.direita ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 18px;
+    margin-right: 13px;
+}
+
+
+.direita ul li a{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+      border-top-color: rgba(255, 255, 255, 0.1);
+      border-right-color: rgba(255, 255, 255, 0.1);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+      border-left-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: 0.3s ease;
+
+}
+
+.direita ul li a:hover{
+  color: #ff38ee;
+  border-color: #ff38ee;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: translateY(-4px) scale(1.05);
+}
+
+
+.direita ul{
+    line-height: 55px;
+    position: relative;
+    display: flex;
+}

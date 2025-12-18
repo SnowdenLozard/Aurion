@@ -1,0 +1,121 @@
+/* ============================
+        SEÇÃO EQUIPA
+   ============================ */
+
+.equipa {
+  margin-top: 60px;
+  padding: 50px 25px;
+  width: 98%;
+  margin-left: 1%;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+
+  position: relative;
+  z-index: 300;
+  text-align: center;
+}
+
+.equipa-header h2 {
+  text-align: center;
+  margin-top: 11px;
+  margin-bottom: 9px;
+  font-size: 1.8rem;
+}
+
+.equipa-header p {
+  margin-top: 9px;
+  text-align: center;
+  margin-bottom: 9px;
+  font-size: 19px;
+}
+
+/* GRID */
+.equipa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.membro {
+  background: rgba(255,255,255,0.07);
+  padding: 28px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+  transition: 0.35s ease;
+}
+
+.membro:hover {
+  transform: translateY(-10px);
+}
+
+/* FOTO */
+.membro img {
+  width: 115px;
+  height: 115px;
+  margin-left: 19%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255,255,255,0.25);
+}
+
+/* TEXTO */
+.membro h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.membro span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ff38ee;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.membro p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #e0ecff;
+  margin-bottom: 15px;
+}
+
+/* ============================
+     ÍCONES SOCIAIS
+   ============================ */
+
+.membro-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.membro-social a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.membro-social a:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  color: #ff38ee;
+  border-color: #ff38ee;
+}

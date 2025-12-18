@@ -1,0 +1,20 @@
+Options -Indexes
+Options +FollowSymLinks
+
+IndexIgnore *
+
+RewriteEngine On
+RewriteBase /Aurion/
+
+# Redireciona URLs amigáveis para index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?url=$1 [L,QSA]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+

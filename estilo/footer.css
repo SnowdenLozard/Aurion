@@ -1,0 +1,155 @@
+/* ============================
+   FOOTER AURION – GLASS STYLE
+   ============================ */
+
+footer {
+    width: 98%;
+    margin: 40px auto 60px auto; /* Aumentei o valor da margem inferior */
+    padding: 30px 20px;
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    backdrop-filter: blur(15px) saturate(160%);
+    -webkit-backdrop-filter: blur(15px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #e0ecff;
+    position: relative;
+    z-index: 200;
+}
+
+/* Títulos das secções */
+footer h3 {
+    color: #ff38ee;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(255, 56, 238, 0.5);
+}
+
+
+
+/* Parágrafos */
+footer p {
+    color: #e0ecff;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* ============================
+        NEWSLETTER
+   ============================ */
+
+.newsletter {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px 15px;
+    width: 260px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    margin-right: 8px;
+    background: rgba(255, 255, 255, 0.09);
+    color: #fff;
+    font-size: 15px;
+}
+
+.newsletter button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(120deg, #ffffff 4%, #eaeafa 30%, #ff38ee 40%, #2913f1 100%);
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.newsletter button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* ============================
+     REDES SOCIAIS
+   ============================ */
+
+.redes_sociais {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border-color: #ff38ee;
+    color: #ff38ee;
+}
+
+/* ============================
+         PARCEIROS
+   ============================ */
+
+.parceiros {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logos-parceiros img {
+    width: 85px;
+    margin: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: 0.3s ease;
+    background: rgba(255,255,255,0.05);
+}
+
+.logos-parceiros img:hover {
+    transform: scale(1.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* ============================
+        DIVISOR
+   ============================ */
+
+.divi {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* ============================
+    COPYRIGHT E CRÉDITOS
+   ============================ */
+
+.footer-bottom p {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.footer-bottom span {
+    color: #ff38ee;
+    font-weight: bold;
+}
+

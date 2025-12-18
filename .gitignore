@@ -1,0 +1,12 @@
+# Configurações sensíveis
+config/config.php
+
+# Uploads
+uploads/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/

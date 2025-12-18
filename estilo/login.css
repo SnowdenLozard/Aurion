@@ -1,0 +1,385 @@
+:root {
+  --bg-1: #0f1226;
+  --bg-2: #0b1633;
+  --create: #031bf5e0;
+  --accent-a: #6ee7ff;
+  --accent-b: #9b7cff;
+  --glass-bg: rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.12);
+  --glass-highlight: rgba(255,255,255,0.18);
+  --text: rgb(255, 255, 255);
+  --muted: rgba(255,255,255,0.6);
+  --card-radius: 20px;
+  --font-weight: bold;
+  --glass-padding: 32px;
+}
+
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--text);
+  background-image: url('../imagem/Aurion8.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  overflow: hidden;
+}
+
+/* ===== Textura de ruído ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: linear-gradient(transparent, transparent),
+                    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.6"/></svg>');
+  mix-blend-mode: overlay;
+}
+
+.inputBox{
+	position: relative;
+}
+
+
+/* ===== Elementos flutuantes ===== */
+.bg-shape {
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.span-required{
+			display: none;
+		}
+
+.bg-shape.g1 {
+  width: 540px;
+  height: 540px;
+  left: -120px;
+  top: -80px;
+  background: linear-gradient(135deg, var(--accent-b), transparent);
+}
+
+.bg-shape.g2 {
+  width: 420px;
+  height: 420px;
+  right: -100px;
+  bottom: -80px;
+  background: linear-gradient(45deg, var(--accent-a), transparent);
+}
+
+#curso{
+  padding: 6px 6px;
+  border-radius: 6px;
+  color: #000;
+  border: 0;
+  font-weight: bold;
+  font-size: 15px;
+  outline: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.096));
+}
+
+.esc_cur{
+  margin-top: 15px;
+}
+
+/* ===== Card principal ===== */
+fieldset {
+  width: min(960px, 98vw);
+  height: 600px;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+  backdrop-filter: blur(15px) saturate(140%);
+  -webkit-backdrop-filter: blur(15px) saturate(140%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--card-radius) + 6px);
+  padding: calc(var(--glass-padding) + 8px);
+  box-shadow: 0 10px 40px rgba(2,6,23,0.6),
+              inset 0 1px 0 rgba(255,255,255,0.02);
+  position: relative;
+  overflow: visible;
+}
+
+.fieldset::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  -webkit-mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);
+  mask: linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);
+  -webkit-mask-composite: exclude;
+  mask-composite: subtract;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ===== Painel esquerdo ===== */
+.showcase {
+  padding: 28px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 20px;
+}
+
+.glass {
+  padding: 26px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 30px rgba(3,8,20,0.45);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px) saturate(120%);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ===== Inputs ===== */
+.inputu{
+  width: 50%;
+  padding: 12px 14px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.096), rgba(255, 255, 255, 0.096));
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(100%);
+  font-size: 15px;
+  font-weight: var(--font-weight);
+  color: white;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: none;
+  text-transform: capitalize;
+  outline: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.096), rgba(255, 255, 255, 0.096));
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(100%);
+  font-size: 15px;
+  font-weight: var(--font-weight);
+  color: var(--text);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* .sign_goo_git{
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.goo,
+.git{
+  width: 50%;
+  height: 35px;
+  padding: 5px 6px;
+  outline: none;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(120deg, #ffffff 4%, #eaeafa 30%, #ff38ee 40%, #2913f1 100%);
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 12px;
+  transition: transform 0.1s ease;
+}
+
+.goo,
+.git:active {
+  transform: translateY(1px);
+} */
+
+/* ===== Linhas ===== */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.forgot-link {
+  color: var(--accent-a);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+/* ===== Botão ===== */
+.btn {
+  width: 50%;
+  height: 35px;
+  padding: 5px 6px;
+  outline: none;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(120deg, #ffffff 4%, #eaeafa 30%, #ff38ee 40%, #2913f1 100%);
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 12px;
+  transition: transform 0.1s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ===== Texto de cadastro ===== */
+.register-text {
+  margin-top: 18px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.create-account {
+  color: var(--bg-1);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ===== Painel direito ===== */
+.right-panel {
+  position: relative;
+}
+
+.info-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.info-text {
+  max-width: 260px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ===== Bolhas flutuantes ===== */
+.bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.12;
+  filter: blur(8px);
+  mix-blend-mode: screen;
+}
+
+.bubble.b1 {
+  width: 220px;
+  height: 220px;
+  left: -80px;
+  top: 40px;
+  background: radial-gradient(circle at 30% 30%, rgba(155,124,255,0.32), transparent 25%),
+              radial-gradient(circle at 70% 70%, rgba(110,231,255,0.18), transparent 35%);
+}
+
+.bubble.b2 {
+  width: 160px;
+  height: 160px;
+  right: -40px;
+  bottom: -50px;
+  background: radial-gradient(circle at 20% 20%, rgba(110,231,255,0.22), transparent 20%),
+              radial-gradient(circle at 80% 80%, rgba(155,124,255,0.14), transparent 30%);
+}
+
+.bubble.b3 {
+  width: 48px;
+  height: 48px;
+  right: 100px;
+  top: 40px;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.18), transparent 40%);
+}
+
+fieldset{
+	border: 3px solid dodgerblue;
+    border-radius: calc(var(--card-radius) + 6px);
+}
+
+legend{
+	border: 1px solid linear-gradient(120deg, #ffffff 4%, #eaeafa 30%, #ff38ee 40%, #2913f1 100%);
+	padding: 10px;
+  color: black;
+	text-align: center;
+  background: linear-gradient(120deg, #ffffff 4%, #eaeafa 30%, #ff38ee 40%, #2913f1 100%);
+	border-radius: 8px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 880px) {
+  .fieldset {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

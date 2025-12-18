@@ -1,0 +1,113 @@
+/* ============================================================ Conteúdo do estilo geral ======================================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.w50{
+  width: 50%;
+}
+
+.w33{
+  width: 50%;
+}
+
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-image: url("../imagem/Aurion8.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;        /* ← aqui */
+  background-attachment: fixed;  /* ← opcional */
+}
+
+/* ===== Texto gigante no fundo ===== */
+body::before {
+  content: "AURION"; /* Texto no fundo */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  font-size: 18vw;
+  font-weight: 700;
+  letter-spacing: 12px;
+  background: linear-gradient(120deg, #ffffff 0%, #eaeafa 30%, #ff38ee 60%, #2913f1 100%);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 200;
+  user-select: none;
+  opacity: 0;
+  filter: drop-shadow(0 0 20px rgba(0, 153, 255, 0.4));
+
+  /* animações: aparecer → ficar → desaparecer */
+  animation:
+    aparecer 2s ease forwards,       /* aparece */
+    brilho 6s ease-in-out infinite,  /* brilho contínuo */
+    zoom 10s ease-in-out infinite,   /* leve “respiração” */
+    desaparecer 14s ease forwards 16s;/* some após 10 s visível (6 s + 10 s = 16 s total) */
+  animation-delay: 6s;
+}
+
+/* ===== Aparecimento suave ===== */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* ===== Desaparecimento suave ===== */
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+/* ===== Gradiente animado (efeito de brilho leve) ===== */
+@keyframes brilho {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Oscilação sutil de escala (respiração visual) ===== */
+@keyframes zoom {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.03); }
+}
