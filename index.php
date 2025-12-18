@@ -46,6 +46,7 @@
             <div class="direita right">
                <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=home"><i data-lucide="home"></i></a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="message"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
                 </ul>
@@ -59,6 +60,7 @@
             <div class="direita right">
                <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=home"><i data-lucide="home"></i></a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="message"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
                 </ul>
@@ -83,11 +85,18 @@
     if (file_exists($pagina)) {
         include($pagina);
     } else {
-        // Se não existe, inclui a página 404
-        http_response_code(404);
-        include('paginas/404.php');
+        // Se for depoimentos, carrega a home
+        if($url === 'depoimentos'){
+            include('paginas/home.php');
+        } else {
+            // Para outras URLs, inclui 404
+            http_response_code(404);
+            include('paginas/404.php');
+        }
     }
     ?>
+
+
 
     <footer>
         <div class="footer-top">
