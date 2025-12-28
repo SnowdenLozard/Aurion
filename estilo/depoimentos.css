@@ -16,7 +16,8 @@
 }
 
 /* Layout dos cartões */
-.cards {
+.cards,
+.equipa-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
@@ -25,7 +26,8 @@
 }
 
 /* Cartão glass */
-.card {
+.card,
+.membro {
   padding: 30px 20px;
   border-radius: 20px;
   position: relative;
@@ -65,7 +67,8 @@
 }
 
 /* Imagem */
-.card img {
+.card img,
+.membro img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -84,7 +87,8 @@
   opacity: 0.8;
 }
 
-.card p {
+.card p,
+.membro p {
   margin-top: 15px;
   font-size: 0.95rem;
   line-height: 1.5;

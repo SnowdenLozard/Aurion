@@ -56,17 +56,6 @@
   transform: translateY(-10px);
 }
 
-/* FOTO */
-.membro img {
-  width: 115px;
-  height: 115px;
-  margin-left: 19%;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 2px solid rgba(255,255,255,0.25);
-}
-
 /* TEXTO */
 .membro h3 {
   color: #fff;
@@ -81,13 +70,6 @@
   color: #ff38ee;
   text-align: center;
   margin-bottom: 10px;
-}
-
-.membro p {
-  font-size: 0.9rem;
-  text-align: center;
-  color: #e0ecff;
-  margin-bottom: 15px;
 }
 
 /* ============================
