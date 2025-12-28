@@ -12,6 +12,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.btn3{
+  height: 35px;
+  padding: 5px 6px;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(120deg, #ffffff 4%, #eaeafa 30%, #ff38ee 40%, #2913f1 100%);
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 28px;
+  margin-right: 5px;
+  transition: transform 0.1s ease;
+}
+
 
 .w50{
   width: 50%;
