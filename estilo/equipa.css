@@ -30,7 +30,7 @@
 .equipa-header p {
   margin-top: 9px;
   text-align: center;
-  margin-bottom: 9px;
+  margin-bottom: 16px;
   font-size: 19px;
 }
 
@@ -80,6 +80,10 @@
   display: flex;
   justify-content: center;
   gap: 12px;
+}
+
+section.sobre{
+  text-align: center;
 }
 
 .membro-social a {
