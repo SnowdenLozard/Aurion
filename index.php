@@ -30,6 +30,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagem/Aurion8.jpg" sizes="32x32" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const openMenu = document.getElementById('openMenu');
+            const closeMenu = document.getElementById('closeMenu');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('overlay');
+
+            // Verificação de segurança (IMPORTANTE)
+            if (!openMenu || !closeMenu || !mobileMenu || !overlay) {
+                return;
+            }
+
+            openMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                overlay.classList.add('active');
+            });
+
+            closeMenu.addEventListener('click', fecharMenu);
+            overlay.addEventListener('click', fecharMenu);
+
+            function fecharMenu() {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+
+            lucide.createIcons();
+        });
+        </script>
     <script src="https://unpkg.com/lucide@latest" ></script>
     <title>AURION</title>
 </head>
@@ -46,30 +75,38 @@
             <div class="direita right">
                <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=home"><i data-lucide="home"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="message"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
-                </ul>
-
-            
-            </div>
-             
-        </nav>
-
-        <nav class="mobile" id="mobile">
-            <div class="direita right">
-               <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=home"><i data-lucide="home"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="message"></i></a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="megaphone"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
                 </ul>
             </div>
              
         </nav>
-        <div class="overlay" id="overlay"></div>
+
+
+        <!-- Botão Hambúrguer -->
+        <button class="menu-toggle" id="openMenu">
+            <i data-lucide="menu"></i>
+        </button>
+
+        <!-- Menu Mobile -->
          <div class="clear"></div>
     </header>
+
+            <nav class="mobile-menu direita" id="mobileMenu">
+            <button class="close-menu" id="closeMenu">
+                <i data-lucide="x"></i>
+            </button>
+
+            <ul>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=home"><i data-lucide="home"></i></a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="megaphone"></i></a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
+                </ul>
+        </nav>
+
+        <div class="overlay" id="overlay"></div>
 
 <?php 
 // Captura da URL

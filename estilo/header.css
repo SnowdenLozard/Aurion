@@ -16,10 +16,6 @@ header{
 }
 
 
-.mobile{
-  display: none;
-}
-
 
 .esquerda .img_au{
     width: 55px;
@@ -82,4 +78,114 @@ header{
     line-height: 55px;
     position: relative;
     display: flex;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+.menu-toggle i {
+    width: 26px;
+    height: 26px;
+    color: #38bdf8; /* azul neon Aurion */
+}
+
+/* Menu mobile */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    backdrop-filter: blur(12px);
+    padding: 24px;
+    transition: right 0.35s ease;
+    z-index: 500000;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 22px;
+}
+
+.mobile-menu ul li a {
+    color: #e5e7eb;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+/* Botão fechar */
+.close-menu {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(15, 23, 42, 0.85);
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close-menu i {
+    width: 24px;
+    height: 24px;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    display: none;
+    z-index: 1050;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* RESPONSIVO */
+@media (max-width: 500px) {
+    nav.desktop {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
 }
