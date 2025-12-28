@@ -19,7 +19,7 @@
                     é um impulsionador para um desempenho academico excelente e produtividade 
                     sem necessidade de stress, com várias horas de estudo eficiente.
                 </p>
-                <button class="btn" onclick="active_button()">Saber Mais</button>
+                <button class="btn" onclick="redict()">Saber Mais</button>
             </div>
 
             <div class="who_is w33">
@@ -29,7 +29,7 @@
                     teu guia escolar com horários academicos, nomes dos professor, 
                     director e outros funcionarios pertencente a Instituição. 
                 </p>
-                <button class="btn" onclick="active_button()">Saber Mais</button>
+                <button class="btn" onclick="redict()">Saber Mais</button>
             </div> 
             </div>           
         </section>  

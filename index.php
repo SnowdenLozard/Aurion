@@ -78,7 +78,7 @@
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="megaphone"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
-                    <button class="btn3">Cadastrar-se</button>
+                    <button class="btn3" onclick="redict()">Cadastrar-se</button>
                 </ul>
             </div>
              
