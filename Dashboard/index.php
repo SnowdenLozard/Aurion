@@ -3,51 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Aurion</title>
+    <link rel="stylesheet" href="../estilo/dashboard.css">
+    <script src="https://unpkg.com/lucide@latest" ></script>
+    <title>Dashboard Aluno Aurion</title>
 </head>
 <body>
-    
-    <header>
-        <div class="esquerda">
-                <a href="<?php echo INCLUDE_PATH; ?>?url=home"><img loading="lazy"  src="<?php echo INCLUDE_PATH; ?>imagem/Aurion8.jpg" alt="Img-aurion" class="img_au left"></a> 
-        </div>
+    <main>
 
-        
-        <nav class="desktop">
-            <div class="direita right">
-               <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=home"><i data-lucide="home"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="megaphone"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
-                    <button class="btn3" onclick="redict()">Cadastrar-se</button>
+        <section class="header_lateral">
+            <img src="../imagem/fabio.jpeg" alt="imagem_perfil">
+
+            <nav class="desktop">
+                <ul>
+                    <li><a href=""><i data-lucide="megaphone"></i> Casa</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Cursos</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Certificados</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Ranking</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Projectos</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Educonnect</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Comunidade</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Teu</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Enunciado</a></li>
+                    <li><a href=""><i data-lucide="megaphone"></i> Video</a></li>    
+                    <li><a href=""><i data-lucide="megaphone"></i> Perfil</a></li>
                 </ul>
-            </div>
-             
-        </nav>
+            </nav>
+        </section>
+    </main>
 
-        <!-- Botão Hambúrguer -->
-        <button class="menu-toggle" id="openMenu">
-            <i data-lucide="menu"></i>
-        </button>
-
-        <!-- Menu Mobile -->
-         <div class="clear"></div>
-    </header>
-
-            <nav class="mobile-menu direita" id="mobileMenu">
-            <button class="close-menu" id="closeMenu">
-                <i data-lucide="x"></i>
-            </button>
-
-            <ul>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=home"><i data-lucide="home"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=depoimentos"><i data-lucide="megaphone"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=sobre"><i data-lucide="info"></i></a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>?url=contato"><i data-lucide="mail"></i></a></li>
-                </ul>
-        </nav>
-
-        <div class="overlay" id="overlay"></div>
+       <script>
+            lucide.createIcons();
+        </script>
 </body>
 </html>
