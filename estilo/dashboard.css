@@ -6,21 +6,24 @@
 }
 
 body{
-    background-image: url("../imagem/Aurion8.jpg");
+    background-color: #0a1929;
 }
 
-section.header_lateral{
+section.header{
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+
+.header_lateral{
     padding: 14px 16px;
     margin: 23px 14px;
     width: 270px;
-    height: 95vh;
     border-radius: 16px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(14px) saturate(160%);
-    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    background: linear-gradient(400deg, blueviolet, blueviolet, #fff);
 
     img{
         width: 130px;
