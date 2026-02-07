@@ -1,5 +1,5 @@
 <?php 
-    define('INCLUDE_PATH', 'http://localhost/Aurion/');
+    define('INCLUDE_PATH', '/Aurion/');
 
     
 ?>
