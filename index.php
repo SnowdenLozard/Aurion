@@ -17,57 +17,26 @@
     <link rel="preload" href="<?php echo INCLUDE_PATH; ?>estilo/footer.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="<?php echo INCLUDE_PATH; ?>estilo/depoimentos.css" as="style" onload="this.rel='stylesheet'">
     <noscript>
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/aurion.css">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/contato.css">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/estilos_gerais.css">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/header.css">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/equipa.css">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/footer.css">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/depoimentos.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/aurion.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/contato.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/estilos_gerais.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/header.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/equipa.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/footer.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/depoimentos.css">
     </noscript>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="imagem/Aurion8.jpg" sizes="32x32" type="image/x-icon">
+    <link rel="shortcut icon" href="imagem/Aurion8.jpg" sizes="32x32" type="image/x-icon">    
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            const openMenu = document.getElementById('openMenu');
-            const closeMenu = document.getElementById('closeMenu');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const overlay = document.getElementById('overlay');
-
-            // Verificação de segurança (IMPORTANTE)
-            if (!openMenu || !closeMenu || !mobileMenu || !overlay) {
-                return;
-            }
-
-            openMenu.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                overlay.classList.add('active');
-            });
-
-            closeMenu.addEventListener('click', fecharMenu);
-            overlay.addEventListener('click', fecharMenu);
-
-            function fecharMenu() {
-                mobileMenu.classList.remove('active');
-                overlay.classList.remove('active');
-            }
-
-            lucide.createIcons();
-        });
-        </script>
-        
-        <script>
-            function redict(){
-                window.location.replace("cadastrar.php");
-            }
-        </script>
-
-
+        function redict(){
+            window.location.replace("cadastrar.php");
+        }
+    </script>
     <script src="https://unpkg.com/lucide@latest" ></script>
+    <script src= "script/menu.js" defer></script>
     <title>AURION</title>
 </head>
 

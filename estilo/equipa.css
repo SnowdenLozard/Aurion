@@ -25,10 +25,10 @@
 
 /* CARD */
 .membro {
-  background: rgba(255,255,255,0.07);
+  background: #161B22;
   padding: 28px 20px;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid #30363D;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.45);
   transition: 0.35s ease;

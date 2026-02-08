@@ -119,22 +119,22 @@
             <div class="cards">
 
                 <div class="card glass">
-                <img src="imagem/alu.jpeg" alt="Aluno">
-                <h3>Carlos Texeira</h3>
-                <span>Aluno</span>
-                <p>
-                    Serviço excelente! A equipa foi muito profissional e superou
-                    as expectativas.
-                </p>
+                    <img src="imagem/alu.jpeg" alt="Aluno">
+                    <h3>Carlos Texeira</h3>
+                    <span>Aluno</span>
+                    <p>
+                        Serviço excelente! A equipa foi muito profissional e superou
+                        as expectativas.
+                    </p>
                 </div>
 
                 <div class="card glass">
-                <img src="imagem/alu.jpeg" alt="Aluno">
-                <h3>Cristiano Gabriel</h3>
-                <span>Aluno</span>
-                <p>
-                    Organização impecável e atenção aos detalhes. Recomendo muito!
-                </p>
+                    <img src="imagem/alu.jpeg" alt="Aluno">
+                    <h3>Cristiano Gabriel</h3>
+                    <span>Aluno</span>
+                    <p>
+                        Organização impecável e atenção aos detalhes. Recomendo muito!
+                    </p>
                 </div>
 
                 <div class="card glass">
