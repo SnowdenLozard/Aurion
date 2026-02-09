@@ -18,3 +18,4 @@ RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?url=$1 [L,QSA]
   ExpiresByType image/webp "access plus 1 year"
 </IfModule>
 
+

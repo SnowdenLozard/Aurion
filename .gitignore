@@ -1,6 +1,6 @@
 # Configurações sensíveis
 config/config.php
-
+aurion-backend/
 # Uploads
 uploads/
 

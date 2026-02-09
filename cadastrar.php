@@ -17,17 +17,10 @@
   <form action="verificar.php" method="POST" id="form">
     <input type="hidden" name="recaptcha_token" id="recaptcha_token">
 
-  <fieldset role="main" aria-label="Liquid glass login card demo">
-
-    <legend><b>AURION - CADASTRAR</b></legend>
-    <div class="bg-shape g1" aria-hidden="true"></div>
-    <div class="bg-shape g2" aria-hidden="true"></div>
-
-      <div class="showcase">
+        <div class="showcase">
         <div class="glass">
           <div class="form-header">
             <div class="form-title">Bem-vindo, <span>Cadastra-se</span></div>
-            <div class="muted">Acesso seguro</div>
           </div>
 
           <div class="inputbox">
@@ -50,13 +43,16 @@
             <span class="span-required">A senhas não são iguais</span>
           </div>
 
-          <div class="row checkbox-row">
-            <input class="inputu" type="date" name="born" id="born">
-            <input  class="inputu" type="text" name="turma" id="turma" placeholder="turma">
+          <div class="inputbox">
+            <input class="input" type="date" name="born" id="born" required>
           </div>
 
-          <div class="esc_cur">
-            <select name="curso" id="curso">
+          <div class="inputbox">
+            <input class="input" type="text" name="turma" id="turma" placeholder="Turma" required>
+          </div>
+
+          <div class="inputbox">
+            <select class="input select" name="curso" id="curso" required>
               <option value="">Selecione seu curso</option>
               <option value="Informática">Informática</option>
               <option value="Informática e sistemas multimédia">Informática e sistemas multimédia</option>
@@ -64,40 +60,18 @@
             </select>
           </div>
 
+
+          <div class="register-text">
+            Já tenho uma conta.
+            <a href="<?php echo INCLUDE_PATH; ?>login.php" class="create-account">Fazer Login</a>
+        </div>
                     
-          <input class="btn" type="submit" name="submit" id="submit">
+          <button class="btn" type="submit">Cadastrar-se</button>
+
         </div> 
-
-        <div class="register-text">
-          Já tenho uma conta.
-          <a href="<?php echo INCLUDE_PATH; ?>login.php" class="create-account">Fazer Login</a>
-        </div>
       </div>
 
-      <div class="right-panel">
-        <div class="glass info-panel">
-          <p class="info-text">
-            Inteligência que conecta mentes brilhantes <span>AURION</span>.
-          </p>
 
-          <!-- <div class="sign_goo_git">
-            <input class="goo" type="button" value="Google">
-            <input class="git" type="button" value="Git Hub">
-          </div> -->
-        </div>
-
-        <div id="error-box" class="error-box"></div>
-
-
-        
-        <div class="bubbles" aria-hidden="true">
-          <div class="bubble b1"></div>
-          <div class="bubble b2"></div>
-          <div class="bubble b3"></div>
-        </div>
-      </div>
-  </fieldset>
-  
   </form>
 
   <script src="https://www.google.com/recaptcha/api.js?render=6Le2QxcsAAAAACAXrBRh4RfYUTGPSI4eIDXGQVeo"></script>

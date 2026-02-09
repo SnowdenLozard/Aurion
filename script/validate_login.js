@@ -1,45 +1,54 @@
+const form   = document.getElementById('form');
+const campos = document.querySelectorAll('.input');
+const spans  = document.querySelectorAll('.span-required');
 
-		const form   = document.getElementById('form');
-		const campos = document.querySelectorAll('.input');
-		const spans  = document.querySelectorAll('.span-required');
-		const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+function setError(index){
+    campos[index].classList.add('error');
+    spans[index].classList.add('show');
+    campos[index].setAttribute('aria-invalid', 'true');
+}
 
-        function mantcert(index){
-            campos[index].style.border = '';
-            spans[index].style.display = 'none';
-        }
+function removeError(index){
+    campos[index].classList.remove('error');
+    spans[index].classList.remove('show');
+    campos[index].removeAttribute('aria-invalid');
+}
 
-		function setError(index){
-			campos[index].style.border = '2px solid #e63636';
-			spans[index].style.display = 'block';
-		}
+function emailValidate(){
+    const email = campos[0];
 
-		function removeError(index){
-			campos[index].style.border = '';
-			spans[index].style.display = 'none';
-		}
+    if (email.value.length === 0) {
+        removeError(0);
+        return;
+    }
 
-		function emailValidate(){
-			if(!emailRegex.test(campos[0].value))
-			{
-				setError(0);
-                if(campos[0].value.length == 0){
-                    mantcert(0);
-                }
-			}
-			else
-			{
-				removeError(0);
-			}
-		}
+    if (!email.checkValidity()) {
+        setError(0);
+    } else {
+        removeError(0);
+    }
+}
 
-		function mainPasswordValidate(){
-			if(campos[1].value.length < 8){
-				setError(1);
-                if(campos[1].value.length == 0){
-                    mantcert(1);
-                }
-			}else{
-				removeError(1);
-			}
-		}
+function mainPasswordValidate(){
+    const password = campos[1];
+
+    if (password.value.length === 0) {
+        removeError(1);
+        return;
+    }
+
+    if (password.value.length < 8) {
+        setError(1);
+    } else {
+        removeError(1);
+    }
+}
+
+form.addEventListener('submit', (e) => {
+    emailValidate();
+    mainPasswordValidate();
+
+    if (document.querySelectorAll('.error').length > 0) {
+        e.preventDefault();
+    }
+});

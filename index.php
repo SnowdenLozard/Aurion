@@ -28,7 +28,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v20/..." crossorigin>
     <link rel="shortcut icon" href="imagem/Aurion8.jpg" sizes="32x32" type="image/x-icon">    
     <script>
         function redict(){
